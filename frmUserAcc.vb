@@ -2,6 +2,8 @@
     Public EIDAC
 
     Private Sub frmUserAcc_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Timer1.Start()
+
         Reset()
         viewTheAccount()
     End Sub
@@ -48,5 +50,9 @@
 
     Private Sub Panel3_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel3.Paint
 
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        viewTheAccount()
     End Sub
 End Class

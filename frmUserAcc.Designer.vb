@@ -22,6 +22,7 @@ Partial Class frmUserAcc
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUserAcc))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -54,6 +55,7 @@ Partial Class frmUserAcc
         Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -442,6 +444,10 @@ Partial Class frmUserAcc
         Me.DataGridView1.Size = New System.Drawing.Size(767, 711)
         Me.DataGridView1.TabIndex = 6
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 10000
+        '
         'frmUserAcc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -500,4 +506,5 @@ Partial Class frmUserAcc
     Friend WithEvents UpdateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

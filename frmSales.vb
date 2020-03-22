@@ -11,6 +11,7 @@
 
     Private Sub frmSales_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         salesView()
+        Timer1.Start()
 
         If DataGridView1.RowCount > 1 Then
             Dim total As Integer = 0
@@ -74,5 +75,9 @@
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        salesView()
     End Sub
 End Class

@@ -36,6 +36,7 @@ Public Class ONAcc
     End Sub
 
     Private Sub btnAddProd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddProd.Click
+
         click1 = "Cashier"
         Reset()
         online()
@@ -78,9 +79,14 @@ Public Class ONAcc
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Timer1.Start()
         click1 = "Admin"
         Reset()
         online()
 
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        online()
     End Sub
 End Class

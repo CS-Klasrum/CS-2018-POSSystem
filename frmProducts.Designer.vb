@@ -22,6 +22,7 @@ Partial Class frmProducts
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProducts))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -42,6 +43,7 @@ Partial Class frmProducts
         Me.AddProductToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProdDelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProdUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -289,6 +291,10 @@ Partial Class frmProducts
         Me.ProdUpdateToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
         Me.ProdUpdateToolStripMenuItem.Text = "Prod&Update"
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 10000
+        '
         'frmProducts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -332,4 +338,5 @@ Partial Class frmProducts
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cmbRole As System.Windows.Forms.ComboBox
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

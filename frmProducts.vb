@@ -163,4 +163,8 @@ Public Class frmProducts
                 DataGridView1.DataSource = table
         End Select
     End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+
+    End Sub
 End Class

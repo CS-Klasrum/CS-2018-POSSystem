@@ -22,6 +22,7 @@ Partial Class frmSales
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSales))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -33,6 +34,7 @@ Partial Class frmSales
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnTopSales = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,11 +53,11 @@ Partial Class frmSales
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Label2.Location = New System.Drawing.Point(12, 8)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 22)
+        Me.Label2.Size = New System.Drawing.Size(56, 24)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Sales"
         '
@@ -67,7 +69,7 @@ Partial Class frmSales
         Me.Panel2.Controls.Add(Me.btnSave)
         Me.Panel2.Controls.Add(Me.btnTopSales)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 699)
+        Me.Panel2.Location = New System.Drawing.Point(0, 678)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1067, 71)
         Me.Panel2.TabIndex = 15
@@ -75,11 +77,11 @@ Partial Class frmSales
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(13, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(201, 42)
+        Me.Label1.Size = New System.Drawing.Size(200, 39)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Total Sales:"
         '
@@ -100,7 +102,7 @@ Partial Class frmSales
         Me.btnSave.FlatAppearance.BorderSize = 0
         Me.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
         Me.btnSave.Location = New System.Drawing.Point(896, 2)
@@ -116,7 +118,7 @@ Partial Class frmSales
         Me.btnTopSales.FlatAppearance.BorderSize = 0
         Me.btnTopSales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
         Me.btnTopSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTopSales.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTopSales.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTopSales.ForeColor = System.Drawing.Color.White
         Me.btnTopSales.Image = CType(resources.GetObject("btnTopSales.Image"), System.Drawing.Image)
         Me.btnTopSales.Location = New System.Drawing.Point(982, 3)
@@ -163,15 +165,19 @@ Partial Class frmSales
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1067, 661)
+        Me.DataGridView1.Size = New System.Drawing.Size(1067, 640)
         Me.DataGridView1.TabIndex = 16
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 10000
         '
         'frmSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1067, 770)
+        Me.ClientSize = New System.Drawing.Size(1067, 749)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -196,4 +202,5 @@ Partial Class frmSales
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lblSales As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class
